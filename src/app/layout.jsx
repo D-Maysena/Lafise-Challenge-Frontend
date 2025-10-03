@@ -1,4 +1,4 @@
-import Header from "./components/header";
+import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import "./globals.css";
 
@@ -7,8 +7,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="flex">
         <Sidebar />
-        <Header />
-        {children}
+        <div className="flex flex-col flex-1 ">
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );
