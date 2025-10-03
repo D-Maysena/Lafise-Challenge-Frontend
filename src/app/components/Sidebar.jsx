@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { FiChevronRight } from "react-icons/fi";
 import { BsGrid1X2Fill, BsPiggyBankFill } from "react-icons/bs";
@@ -7,21 +8,33 @@ import { MdOutlineChangeCircle, MdPriceCheck } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { HiSwitchHorizontal } from "react-icons/hi";
 import { FaArrowRightArrowLeft } from "react-icons/fa6";
-
-const menuOptions = [
-  { label: "Tablero", icon: <BsGrid1X2Fill /> },
-  { label: "Transferir", icon: <FaArrowRightArrowLeft /> },
-  { label: "Pagar", icon: <PiMoneyFill /> },
-  { label: "Mis transacciones", icon: <FaUserCheck /> },
-  { label: "Gestionar", icon: <MdOutlineChangeCircle /> },
-  { label: "Cheques", icon: <FaMoneyCheck /> },
-  { label: "Paganet", icon: <MdPriceCheck /> },
-  { label: "Administrar", icon: <FaUserCheck /> },
-  { label: "Ahorro automático", icon: <BsPiggyBankFill /> },
-  { label: "Configuración", icon: <IoMdSettings /> },
-];
+import { useSidebarStore } from "@/store/useSidebarStore";
 
 export default function Sidebar() {
+  const { activeOption, setActiveOption } = useSidebarStore();
+
+
+  const menuOptions = [
+    { id: "tablero", label: "Tablero", icon: <BsGrid1X2Fill /> },
+    { id: "transferir", label: "Transferir", icon: <FaArrowRightArrowLeft /> },
+    { id: "pagar", label: "Pagar", icon: <PiMoneyFill /> },
+    {
+      id: "mistransacciones",
+      label: "Mis transacciones",
+      icon: <FaUserCheck />,
+    },
+    { id: "gestionar", label: "Gestionar", icon: <MdOutlineChangeCircle /> },
+    { id: "cheques", label: "Cheques", icon: <FaMoneyCheck /> },
+    { id: "paganet", label: "Paganet", icon: <MdPriceCheck /> },
+    { id: "administrar", label: "Administrar", icon: <FaUserCheck /> },
+    {
+      id: "ahorroautomatico",
+      label: "Ahorro automático",
+      icon: <BsPiggyBankFill />,
+    },
+    { id: "configuracion", label: "Configuración", icon: <IoMdSettings /> },
+  ];
+
   return (
     <aside className="w-[260px] h-200 bg-[#F9FAF9] flex flex-col p-4 border-r-1 border-[#F3F5F3]">
       <div className="flex justify-center">
@@ -31,8 +44,12 @@ export default function Sidebar() {
         {menuOptions.map((item, index) => (
           <li
             key={index}
-            className="flex items-center p-2 text-[#272727] cursor-pointer 
-                       hover:bg-[#EDF5F2] hover:text-[#3B8668] hover:rounded-lg"
+            onClick={() => setActiveOption(item.id)}
+            className={`flex items-center p-2 cursor-pointer rounded-lg ${
+              activeOption === item.id
+                ? "bg-[#EDF5F2] text-[#3B8668]"
+                : "text-[#272727] hover:bg-[#EDF5F2] hover:text-[#3B8668]"
+            }`}
           >
             {item.icon}
             <span className="ml-2 flex justify-between items-center w-full">

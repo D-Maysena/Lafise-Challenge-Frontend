@@ -2,7 +2,7 @@ const TableTransactions = ({ transactions }) => {
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-left border border-gray-200 text-sm">
-        <thead className="bg-gray-100 text-[#8D918D]  ">
+        <thead className="text-[#8D918D]  ">
           <tr>
             <th className="px-4 py-3 font-normal">Fecha</th>
             <th className="px-4 py-3 font-normal">Descripción</th>
