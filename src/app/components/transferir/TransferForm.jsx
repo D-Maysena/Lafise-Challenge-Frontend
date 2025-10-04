@@ -37,7 +37,7 @@ const TransferForm = ({ step, form, handleChange, accounts }) => {
   );
 
   return (
-    <div className="flex flex-col justify-center gap-5 p-5 bg-[#F9FAF9]">
+    <div className="flex flex-col w-full justify-center gap-5 p-5 bg-[#F9FAF9]">
       <div className="flex flex-col sm:flex-row gap-5 w-full">
         {step > 0 && (
           <FormField label="Cuenta origen">

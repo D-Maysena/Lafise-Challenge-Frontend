@@ -20,7 +20,7 @@ const Transferir = () => {
     <div className="p-5">
       <h2 className="text-xl font-bold mb-5">Transferir</h2>
 
-      <div className="border border-gray-200 w-full max-w-[1000px] h-auto sm:h-[600px] mt-4 p-4 flex flex-col gap-4">
+      <div className="border border-gray-200 w-full  h-auto sm:h-[600px] mt-4 p-4 flex flex-col gap-4">
         <StepProgress steps={steps} step={step} />
 
         <hr className="border-gray-300 mt-5" />

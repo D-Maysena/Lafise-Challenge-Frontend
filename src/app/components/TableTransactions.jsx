@@ -18,9 +18,8 @@ const TableTransactions = ({ transactions }) => {
   });
 
   return (
-    <div className="w-full overflow-x-auto">
-      {/* Filtros de fecha */}
-      <div className="flex gap-4 mb-4 items-center flex-wrap">
+    <div className="w-full h-full overflow-x-auto">
+      <div className="flex h-full gap-4 mb-4 items-center flex-wrap">
         <div className="flex flex-col">
           <label className="text-sm font-medium">Desde:</label>
           <input
@@ -50,7 +49,7 @@ const TableTransactions = ({ transactions }) => {
         </button>
       </div>
 
-      <table className="w-full text-left border border-gray-200 text-sm">
+      <table className="w-full h-full text-left border border-gray-200 text-sm">
         <thead className="text-[#8D918D] bg-gray-100">
           <tr>
             <th className="px-4 py-3 font-normal">Fecha</th>

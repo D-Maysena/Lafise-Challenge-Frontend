@@ -34,7 +34,7 @@ const Tablero = () => {
 
   return (
     <div>
-      <div className="flex items-center mt-5 ml-5">
+      <div className="flex items-center  mt-5 ml-5">
         <span className="font-bold text-xl">Mis tarjetas</span>
       </div>
       <CardTarjet tarjetas={tarjetas} />

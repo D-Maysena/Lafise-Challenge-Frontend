@@ -6,7 +6,7 @@ const CardTarjet = ({ tarjetas }) => {
   console.log(user);
   
   return (
-    <div className="flex flex-wrap gap-5 mt-4 ">
+    <div className="flex flex-wrap justify-center gap-5 mt-4 ">
       {tarjetas.map((t, index) => (
         <div
           key={index}

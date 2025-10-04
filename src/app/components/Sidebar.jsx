@@ -53,7 +53,7 @@ export default function Sidebar() {
   return (
     <aside
       className={`bg-[#F9FAF9] flex flex-col p-4 border-r border-[#F3F5F3] h-full transition-all duration-300 ${
-        isCollapsed ? "w-20" : "w-full sm:w-[260px]"
+        isCollapsed ? "w-20" : "w-full h-full sm:w-[260px]"
       }`}
     >
       <div className="flex  items-center mb-4">

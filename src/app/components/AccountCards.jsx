@@ -15,7 +15,7 @@ const AccountCards = ({ accounts }) => {
           key={index}
           className="border border-gray-300 rounded-lg shadow-lg p-4 bg-white flex flex-col sm:flex-row items-start justify-between w-full max-w-[280px] transform transition-transform duration-200 hover:scale-105"
         >
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col justify-items-start gap-1">
             <span className="font-bold text-gray-800">{a.currency} Cuenta</span>
             <div className="flex text-[#3B8668] items-center gap-1">
               <div className="text-[#3B8668] bg-[#EDF5F2] rounded-sm px-2 py-0.5">
