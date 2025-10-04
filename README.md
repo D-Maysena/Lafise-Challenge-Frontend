@@ -38,12 +38,16 @@ Este proyecto es una aplicación web desarrollada en **Next.js**, que permite ge
     ```bash
     git clone https://github.com/lafise/mobile-frontend-challenge-mock
     
-4. Ejecuta la API:
+4. Instala las dependencias:
+   ```bash
+   npm i
+
+5. Ejecuta la API:
 
    ```bash
     npm run dev
    
-5. Ejecuta el frontend:
+6. Ejecuta el frontend:
 
    ```bash
     npm run dev
