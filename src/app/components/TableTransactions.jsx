@@ -55,7 +55,7 @@ const TableTransactions = ({ transactions }) => {
           <tr>
             <th className="px-4 py-3 font-normal">Fecha</th>
             <th className="px-4 py-3 font-normal">Descripción</th>
-            <th className="px-4 py-3 font-normal">Débito USD</th>
+            <th className="px-4 py-3 font-normal">Débito NIO</th>
             <th className="px-4 py-3 font-normal">Balance USD</th>
           </tr>
         </thead>

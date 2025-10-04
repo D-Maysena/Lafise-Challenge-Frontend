@@ -16,7 +16,7 @@ export const Header = () => {
       <div className="flex items-center">
         <FaBars size={20} className="mt-2" onClick={toggleCollapse} />
         <div className="flex items-center gap-4 ml-auto mt-2 flex-1 sm:flex-none">
-          <FaRegBell size={27} className="text-[#272727]" />
+          <FaRegBell size={23} className="text-[#272727]" />
           <div className="relative w-full max-w-sm">
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             <input
@@ -27,8 +27,8 @@ export const Header = () => {
           </div>
           <Image
             src={user?.profile_photo || "/foto.png"}
-            width={40}
-            height={40}
+            width={28}
+            height={28}
             alt="foto"
             className="rounded-full"
             priority
