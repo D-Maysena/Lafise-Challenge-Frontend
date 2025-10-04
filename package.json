@@ -14,10 +14,12 @@
     "@fontsource/roboto": "^5.2.8",
     "@mui/icons-material": "^7.3.4",
     "@mui/material": "^7.3.4",
+    "axios": "^1.12.2",
     "next": "15.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
+    "sweetalert2": "^11.23.0",
     "zustand": "^5.0.8"
   },
   "devDependencies": {

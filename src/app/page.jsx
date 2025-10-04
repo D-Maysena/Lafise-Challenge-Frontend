@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div>
-      <main>
+      <main className="w-full" >
         {activeOption === "transferir" ? (
           <Transferir />
         ) : activeOption === "mistransacciones" ? (

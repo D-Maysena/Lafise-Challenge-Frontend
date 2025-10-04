@@ -1,8 +1,13 @@
+"use client";
+
 import AccountCards from "../AccountCards";
 import CardTarjet from "../CardTarjet";
 import TableTransactions from "../TableTransactions";
+import { useDashboardData } from "@/hooks/useDashboardData";
 
 const Tablero = () => {
+  const { user, accounts, transactions, isClient } = useDashboardData();
+
   const tarjetas = [
     {
       account_number: "1234567890123456",
@@ -27,47 +32,9 @@ const Tablero = () => {
     },
   ];
 
-  const accounts = [
-    { accountType: "NIO", code: "C$", number: "12345678", balance: "38,456" },
-    { accountType: "USD", code: "$", number: "22345678", balance: "38,456" },
-    { accountType: "NIO", code: "C$", number: "52345678", balance: "38,456" },
-  ];
-
-  const transactions = [
-    {
-      fecha: "14/11/2021",
-      descripcion: "walmart",
-      debitoUSD: "320.00",
-      balanceUSD: "2,100",
-    },
-    {
-      fecha: "14/11/2021",
-      descripcion: "walmart",
-      debitoUSD: "320.00",
-      balanceUSD: "2,100",
-    },
-    {
-      fecha: "14/11/2021",
-      descripcion: "walmart",
-      debitoUSD: "320.00",
-      balanceUSD: "2,100",
-    },
-    {
-      fecha: "14/11/2021",
-      descripcion: "walmart",
-      debitoUSD: "320.00",
-      balanceUSD: "2,100",
-    },
-    {
-      fecha: "14/11/2021",
-      descripcion: "walmart",
-      debitoUSD: "320.00",
-      balanceUSD: "2,100",
-    },
-  ];
   return (
     <div>
-      <div className="flex items-center mt-10 ml-5">
+      <div className="flex items-center mt-5 ml-5">
         <span className="font-bold text-xl">Mis tarjetas</span>
       </div>
       <CardTarjet tarjetas={tarjetas} />
@@ -75,14 +42,16 @@ const Tablero = () => {
       <div className="flex items-center mt-10 ml-5">
         <span className="font-bold text-xl">Cuentas:</span>
       </div>
-      <AccountCards accounts={accounts} />
+      {isClient && <AccountCards accounts={accounts} />}
 
       <div className="flex items-center justify-between mt-10 ml-5">
         <span className="font-bold text-xl">Transacciones recientes</span>
-        <span className="font-medium text-[14px] mr-[50px]">ver todas</span>
+        <span className="font-medium text-[14px] mr-[50px] cursor-pointer hover:underline">
+          ver todas
+        </span>
       </div>
       <div className="mt-3 p-5">
-        <TableTransactions transactions={transactions} />
+        {isClient && <TableTransactions transactions={transactions} />}
       </div>
     </div>
   );

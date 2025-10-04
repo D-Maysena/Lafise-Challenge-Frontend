@@ -5,9 +5,9 @@ import "./globals.css";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex">
+      <body className="flex ">
         <Sidebar />
-        <div className="flex flex-col flex-1 ">
+        <div className="flex flex-col flex-1 w-1/2 ">
           <Header />
           {children}
         </div>
