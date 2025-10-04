@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
       <body className="flex ">
         <Sidebar />
         <div className="flex flex-col flex-1 w-1/2 ">
-          <Header />
+          <header />
           {children}
         </div>
       </body>
