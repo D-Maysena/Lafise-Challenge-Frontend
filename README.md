@@ -27,7 +27,7 @@ Este proyecto es una aplicación web desarrollada en **Next.js**, que permite ge
 1. Clona el repositorio:
    
    ```bash
-   git clone https://github.com/D-Maysena/Lafise-Challenge-Frontend/
+   git clone https://github.com/D-Maysena/Lafise-Frontend-Challenge
 
 2. Instala las dependencias:
    ```bash
